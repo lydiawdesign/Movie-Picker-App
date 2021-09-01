@@ -1,0 +1,6 @@
+The Movie Database
+api key: ab1b96d8093598b55845446ca45cff2f
+login: kyleslux86
+password: Googlebear2007!
+example request: https://api.themoviedb.org/3/movie/550?api_key=ab1b96d8093598b55845446ca45cff2f (returns: Fight Club)
+Doccumentation: https://developers.themoviedb.org/3/getting-started/introduction
