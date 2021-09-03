@@ -6,3 +6,25 @@ example request: https://api.themoviedb.org/3/movie/550?api_key=ab1b96d8093598b5
 Doccumentation: https://developers.themoviedb.org/3/getting-started/introduction
 Primary query: https://api.themoviedb.org/3/discover/movie?api_key=ab1b96d8093598b55845446ca45cff2f&language=en-US&sort_by=popularity.desc&include_adult=false&
 include_video=false&page=2&primary_release_date.gte=2010-01-01&release_date.lte=2019-12-31&with_genres=28&with_original_language=en&with_watch_monetization_types=flatrate
+Poster url example: https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg
+
+TMDB genre list:
+Action: 28
+Adventure: 12
+Animation: 16
+Comedy: 35
+Crime: 80
+Documentary: 99
+Drama: 18
+Family: 10751
+Fantasy: 14
+History: 36
+Horror: 27
+Music: 10402
+Mystery: 9648
+Romance: 10749
+Science Fiction: 878
+TV Movie: 10770
+Thriller: 53
+War: 10752
+Western: 37
