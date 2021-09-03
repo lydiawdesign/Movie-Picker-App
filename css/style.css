@@ -1,3 +1,9 @@
 :root {
-    --DarkBlue: #1433D9;
+    --darkBlue: #1433D9;
+    --lightBlue: #CBD3FF;
+    --pink: #FF9FD5;
+    --orange: #F46113;
+    --black: black; 
   }
+
+  /* dropshadow on the buttons */
