@@ -4,3 +4,5 @@ login: kyleslux86
 password: Googlebear2007!
 example request: https://api.themoviedb.org/3/movie/550?api_key=ab1b96d8093598b55845446ca45cff2f (returns: Fight Club)
 Doccumentation: https://developers.themoviedb.org/3/getting-started/introduction
+Primary query: https://api.themoviedb.org/3/discover/movie?api_key=ab1b96d8093598b55845446ca45cff2f&language=en-US&sort_by=popularity.desc&include_adult=false&
+include_video=false&page=2&primary_release_date.gte=2010-01-01&release_date.lte=2019-12-31&with_genres=28&with_original_language=en&with_watch_monetization_types=flatrate
