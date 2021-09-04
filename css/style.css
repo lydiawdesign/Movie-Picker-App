@@ -10,3 +10,9 @@ html {
     font-weight: 800;
 }
   /* dropshadow on the buttons */
+header {
+  width: 100vw;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+}
