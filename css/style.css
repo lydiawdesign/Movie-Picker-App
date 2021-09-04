@@ -1,18 +1,51 @@
 :root {
-    --darkBlue: #1433D9;
-    --lightBlue: #CBD3FF;
-    --pink: #FF9FD5;
-    --orange: #F46113;
-    --black: black; 
+  --darkBlue: #1433D9;
+  --lightBlue: #CBD3FF;
+  --pink: #FF9FD5;
+  --orange: #F46113;
+  --black: black; 
   }
 html {
-    font-family: "Raleway";
-    font-weight: 800;
+  font-family: "Raleway";
+  font-weight: 800;
+  background-color: var(--lightBlue);
 }
   /* dropshadow on the buttons */
 header {
   width: 100vw;
-  background-color: red;
+  /* background-color: red; */
+  height: 200px;
   display: flex;
   justify-content: center;
+}
+.description {
+  width: 66.6667vw;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  margin-bottom: 150px;
+  padding: 50px;
+  font-size: 1.5em;
+}
+.container {
+  /* background-color: #1433D9; */
+  width: 66.6667vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+.container .fav {
+  padding: 0px;
+}
+.container #year {
+  width: 95.33px;
+}
+.wrapper {
+  background-color: var(--orange);
+  width: 66.6667vw;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 50px;
+  
 }

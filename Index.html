@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/datepicker.css">
     
     
 
@@ -18,136 +19,145 @@
 </head>
 <body>
     <header class="header">
-        <img src="./Planning/Design/Groovy logo png.png" alt="REPLACE">
+        <img src="./resources/logo.webp" alt="REPLACE">
     </header>
-    <article class="description">
-        <p>
-            At-home movie nights have become more and more frequent over the past year given the current world pandemic. With so many streaming
-            services, it’s difficult to choose what to watch. We are faced with cognitive impairment, struggling to make a choice due to the overload of
-            options out there. Groovy Movie will solve that for you! Simply input what movie genre and decade you are interested in, and Groovy Movie will
-            select 5 movie titles randomly that fit your criteria. Once the 5 films are selected, click on the movie poster and see a brief synopsis and the
-            rotten tomato rating. Found more than one recommendation you’d like to watch? Save movie titles to your list to revisit at a later time!
-        </p>
-    </article>
-    <form class="container">
-        <div class="dropdown is-hoverable">
-            <div class="dropdown-trigger">
-              <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                <span>Genre</span>
-                <span class="icon is-small">
-                  <i class="fas fa-angle-down" aria-hidden="true"></i>
-                </span>
-              </button>
+    <div class="wrapper">
+        <article class="description">
+            <p>
+                At-home movie nights have become more and more frequent over the past year given the current world pandemic. With so many streaming
+                services, it’s difficult to choose what to watch. We are faced with cognitive impairment, struggling to make a choice due to the overload of
+                options out there. Groovy Movie will solve that for you! Simply input what movie genre and decade you are interested in, and Groovy Movie will
+                select 5 movie titles randomly that fit your criteria. Once the 5 films are selected, click on the movie poster and see a brief synopsis and the
+                rotten tomato rating. Found more than one recommendation you’d like to watch? Save movie titles to your list to revisit at a later time!
+            </p>
+        </article>
+        <form class="container">
+            <div class="dropdown is-hoverable">
+                <div class="dropdown-trigger">
+                <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                    <span>Genre</span>
+                    <span class="icon is-small">
+                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                    </span>
+                </button>
+                </div>
+                <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                <div class="dropdown-content">
+                    <div class="dropdown-item" data-tag="28">
+                        <a class="dropdown-item" data-tag="28">
+                            Action
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="12">
+                        <a class="dropdown-item" data-tag="12">
+                            Adventure
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="16">
+                        <a class="dropdown-item" data-tag="16">
+                            Animation
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="35">
+                        <a class="dropdown-item" data-tag="35">
+                            Comedy
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="80">
+                        <a class="dropdown-item" data-tag="80">
+                            Crime
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="99">
+                        <a class="dropdown-item" data-tag="99">
+                            Documentary
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="18">
+                        <a class="dropdown-item" data-tag="18">
+                            Drama
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="10751">
+                        <a class="dropdown-item" data-tag="10751">
+                            Family
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="14">
+                        <a class="dropdown-item" data-tag="14">
+                            Fantasy
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="36">
+                        <a class="dropdown-item" data-tag="36">
+                            History
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="27">
+                        <a class="dropdown-item" data-tag="27">
+                            Horror
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="10402">
+                        <a class="dropdown-item" data-tag="10402">
+                            Music
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="9648">
+                        <a class="dropdown-item" data-tag="9648">
+                            Mystery
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="10749">
+                        <a class="dropdown-item" data-tag="10749">
+                            Romace
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="878">
+                        <a class="dropdown-item" data-tag="878">
+                            Science Fiction
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="10770">
+                        <a class="dropdown-item" data-tag="10770">
+                            TV Movie
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="53">
+                        <a class="dropdown-item" data-tag="53">
+                            Thriller
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="10752">
+                        <a class="dropdown-item" data-tag="10752">
+                            War
+                        </a>
+                    </div>
+                    <div class="dropdown-item" data-tag="37">
+                        <a class="dropdown-item" data-tag="37">
+                            Western
+                        </a>
+                    </div>
+                </div>
+                </div>
+                <!-- <label for="year">(YYYY)</label> -->
             </div>
-            <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-              <div class="dropdown-content">
-                <div class="dropdown-item" data-tag="28">
-                    <a class="dropdown-item" data-tag="28">
-                        Action
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="12">
-                    <a class="dropdown-item" data-tag="12">
-                        Adventure
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="16">
-                    <a class="dropdown-item" data-tag="16">
-                        Animation
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="35">
-                    <a class="dropdown-item" data-tag="35">
-                        Comedy
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="80">
-                    <a class="dropdown-item" data-tag="80">
-                        Crime
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="99">
-                    <a class="dropdown-item" data-tag="99">
-                        Documentary
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="18">
-                    <a class="dropdown-item" data-tag="18">
-                        Drama
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="10751">
-                    <a class="dropdown-item" data-tag="10751">
-                        Family
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="14">
-                    <a class="dropdown-item" data-tag="14">
-                        Fantasy
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="36">
-                    <a class="dropdown-item" data-tag="36">
-                        History
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="27">
-                    <a class="dropdown-item" data-tag="27">
-                        Horror
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="10402">
-                    <a class="dropdown-item" data-tag="10402">
-                        Music
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="9648">
-                    <a class="dropdown-item" data-tag="9648">
-                        Mystery
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="10749">
-                    <a class="dropdown-item" data-tag="10749">
-                        Romace
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="878">
-                    <a class="dropdown-item" data-tag="878">
-                        Science Fiction
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="10770">
-                    <a class="dropdown-item" data-tag="10770">
-                        TV Movie
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="53">
-                    <a class="dropdown-item" data-tag="53">
-                        Thriller
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="10752">
-                    <a class="dropdown-item" data-tag="10752">
-                        War
-                    </a>
-                </div>
-                <div class="dropdown-item" data-tag="37">
-                    <a class="dropdown-item" data-tag="37">
-                        Western
-                    </a>
-                </div>
-              </div>
-            </div>
-            <!-- <label for="year">(YYYY)</label> -->
-            <input type="date" id="year" class="year">
-            </div>
+            <input type="text" id="year" value="Year">
             <input class="button sub" type="submit" value="Submit Choice">
-    </form>
+        </form>
+    </div>
+    <div class="container fav">
+        <a class="button">Favorites List</a>
+    </div>
     
 </body>
 <script
-    src="https://code.jquery.com/jquery-3.6.0.slim.js"
-    integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY="
-    crossorigin="anonymous">
-</script>
+  src="https://code.jquery.com/jquery-3.6.0.js"
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin="anonymous"></script>
+<script src="./js/scripts.js"></script>
+<script
+  src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"
+  integrity="sha256-T0Vest3yCU7pafRw9r+settMBX6JkKN06dqBnpQ8d30="
+  crossorigin="anonymous"></script>
 </html>
