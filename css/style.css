@@ -12,11 +12,15 @@ html {
 }
   /* dropshadow on the buttons */
 
+
+  /* button styling to match custom branding */
   .orange-btn{
       background-color: var(--orange);
       color: white;
       border-radius: 6px;
       font-weight: bolder;
+      box-shadow: 5px 5px 5px grey;
+      cursor: pointer
   }
 
   .blue-btn{
@@ -24,6 +28,8 @@ html {
     color: white;
     border-radius: 4px;
     font-weight: bolder;
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer
   }
 
   .white-btn{
@@ -31,6 +37,8 @@ html {
     color: var(--darkBlue);
     border-radius: 4px;
     font-weight: bolder;
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer;
   }
 
   .lrg-btn{
