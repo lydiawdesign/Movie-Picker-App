@@ -1,0 +1,44 @@
+:root {
+    --darkBlue: #1433D9;
+    --lightBlue: #CBD3FF;
+    --pink: #FF9FD5;
+    --orange: #F46113;
+    --black: black; 
+  }
+html {
+    font-family: "Raleway";
+    font-weight: 800;
+    background-color: var(--lightBlue);
+}
+  /* dropshadow on the buttons */
+
+  .orange-btn{
+      background-color: var(--orange);
+      color: white;
+      border-radius: 6px;
+      font-weight: bolder;
+  }
+
+  .blue-btn{
+    background-color: var(--darkBlue);
+    color: white;
+    border-radius: 4px;
+    font-weight: bolder;
+  }
+
+  .white-btn{
+    background-color: white;
+    color: var(--darkBlue);
+    border-radius: 4px;
+    font-weight: bolder;
+  }
+
+  .lrg-btn{
+      font-size: 150%;
+      padding: 0.5rem 3rem 0.5rem 3rem;
+  }
+
+  .med-btn{
+    font-size: 100%;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+  }
