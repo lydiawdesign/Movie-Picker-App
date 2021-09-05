@@ -10,7 +10,8 @@ html {
     font-weight: 800;
     background-color: var(--lightBlue);
 }
-  /* dropshadow on the buttons */
+
+
 
 
   /* button styling to match custom branding */
@@ -44,6 +45,7 @@ html {
   .lrg-btn{
       font-size: 150%;
       padding: 0.5rem 3rem 0.5rem 3rem;
+      margin: 1rem 3rem 1rem 3rem;
   }
 
   .med-btn{
