@@ -4,3 +4,58 @@ login: kyleslux86
 password: Googlebear2007!
 example request: https://api.themoviedb.org/3/movie/550?api_key=ab1b96d8093598b55845446ca45cff2f (returns: Fight Club)
 Doccumentation: https://developers.themoviedb.org/3/getting-started/introduction
+
+Primary query url:
+https://api.themoviedb.org/3/discover/movie?api_key=ab1b96d8093598b55845446ca45cff2f&language=en-US&sort_by=popularity.desc&
+include_adult=false&include_video=false&page=1&primary_release_year=2010&with_genres=28&with_original_language=en&
+with_watch_monetization_types=flatrate
+
+Poster url example: https://image.tmdb.org/t/p/original/pB8BM7pdSp6B6Ih7QZ4DrQ3PmJK.jpg
+
+TMDB genre list:
+Action: 28
+Adventure: 12
+Animation: 16
+Comedy: 35
+Crime: 80
+Documentary: 99
+Drama: 18
+Family: 10751
+Fantasy: 14
+History: 36
+Horror: 27
+Music: 10402
+Mystery: 9648
+Romance: 10749
+Science Fiction: 878
+TV Movie: 10770
+Thriller: 53
+War: 10752
+Western: 37
+
+
+
+NY Times Movie Reviews
+api key: zQiVNyj3jaUrAJuxqJ6cXAWiQkq1JwxU
+login: bckasper@gmail.com
+password: gr00vy-m0V13!
+example request: https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=godfather&api-key={api_key}
+Doccumentation: https://developer.nytimes.com/docs/movie-reviews-api/1/overview
+
+Example request for search.json (query='lebowski')
+    https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=lebowski&api-key=zQiVNyj3jaUrAJuxqJ6cXAWiQkq1JwxU
+
+    Result:
+    results: Array (1)
+        0 Object{
+            byline: "Janet Maslin",
+            critics_pick: 1,
+            date_updated: "2017-11-02 04:17:54",
+            display_title: "The Big Lebowski",
+            headline: "Big Lebowski, the (Movie)",
+            link: {type: "article", url: "https://www.nytimes.com/1998/03/06/movies/film-review-a-bowling-ball-s-eye-view-of-reality.html", suggested_link_text: "Read the New York Times Review of The Big Lebowski"},
+            mpaa_rating: "R",
+            multimedia: null,
+            opening_date: "1998-03-06",
+            publication_date: "1998-03-06",
+            summary_short: "In a film both sweeter and loopier than &quot;Fargo,&quot; Joel and Ethan Coen and their rogues' gallery of actors explore Souther…",

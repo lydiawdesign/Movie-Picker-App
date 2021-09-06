@@ -8,6 +8,7 @@
 html {
     font-family: "Raleway";
     font-weight: 800;
+/*<<<<<<< feature/results-page*/
     background-color: var(--lightBlue);
 }
 
@@ -52,3 +53,7 @@ html {
     font-size: 100%;
     padding: 0.5rem 1rem 0.5rem 1rem;
   }
+/*=======*/
+}
+  /* dropshadow on the buttons */
+/*>>>>>>> main*/
