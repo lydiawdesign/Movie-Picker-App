@@ -11,49 +11,47 @@ html {
 /*<<<<<<< feature/results-page*/
     background-color: var(--lightBlue);
 }
-
-
-
-
-  /* button styling to match custom branding */
-  .orange-btn{
-      background-color: var(--orange);
-      color: white;
-      border-radius: 6px;
-      font-weight: bolder;
-      box-shadow: 5px 5px 5px grey;
-      cursor: pointer
-  }
-
-  .blue-btn{
-    background-color: var(--darkBlue);
+/* button styling to match custom branding */
+.orange-btn{
+    background-color: var(--orange);
     color: white;
-    border-radius: 4px;
-    font-weight: bolder;
-    box-shadow: 5px 5px 5px grey;
-    cursor: pointer
-  }
-
-  .white-btn{
-    background-color: white;
-    color: var(--darkBlue);
-    border-radius: 4px;
+    border-radius: 6px;
     font-weight: bolder;
     box-shadow: 5px 5px 5px grey;
     cursor: pointer;
-  }
-
-  .lrg-btn{
-      font-size: 150%;
-      padding: 0.5rem 3rem 0.5rem 3rem;
-      margin: 1rem 3rem 1rem 3rem;
-  }
-
-  .med-btn{
-    font-size: 100%;
-    padding: 0.5rem 1rem 0.5rem 1rem;
-  }
-/*=======*/
 }
-  /* dropshadow on the buttons */
-/*>>>>>>> main*/
+
+.blue-btn{
+  background-color: var(--darkBlue);
+  color: white;
+  border-radius: 4px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer
+}
+
+.white-btn{
+  background-color: white;
+  color: var(--darkBlue);
+  border-radius: 4px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer;
+}
+
+.lrg-btn{
+    font-size: 150%;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    margin: 1rem 3rem 1rem 3rem;
+}
+
+.med-btn{
+  font-size: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+/* CSS styling for list page */
+
+#container-box {
+  font-family: 'Bebas Neue', cursive;
+}
