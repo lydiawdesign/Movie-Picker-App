@@ -5,47 +5,54 @@
   --orange: #F46113;
   --black: black; 
   }
+
 html {
   font-family: "Raleway";
   font-weight: 800;
   background-color: var(--lightBlue);
 }
-  /* dropshadow on the buttons */
-header {
-  width: 100vw;
-  /* background-color: red; */
-  height: 200px;
-  display: flex;
-  justify-content: center;
+
+/* button styling to match custom branding */
+.orange-btn{
+    background-color: var(--orange);
+    color: white;
+    border-radius: 6px;
+    font-weight: bolder;
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer;
 }
-.description {
-  width: 66.6667vw;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-  margin-bottom: 350px;
-  padding: 50px;
-  font-size: 1.5em;
+
+.blue-btn{
+  background-color: var(--darkBlue);
+  color: white;
+  border-radius: 4px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer
 }
-.container {
-  /* background-color: #1433D9; */
-  width: 66.6667vw;
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  padding-bottom: 50px;
+
+.white-btn{
+  background-color: white;
+  color: var(--darkBlue);
+  border-radius: 4px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer;
 }
-.container .fav {
-  padding: 0px;
+
+.lrg-btn{
+    font-size: 150%;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+    margin: 1rem 3rem 1rem 3rem;
 }
-.container #year {
-  width: 95.33px;
+
+.med-btn{
+  font-size: 100%;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
-.wrapper {
-  background-color: var(--orange);
-  width: 66.6667vw;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 50px;
-  
+
+/* CSS styling for list page */
+
+#container-box {
+  font-family: 'Bebas Neue', cursive;
 }
