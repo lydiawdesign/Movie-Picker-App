@@ -1,16 +1,17 @@
 :root {
-    --darkBlue: #1433D9;
-    --lightBlue: #CBD3FF;
-    --pink: #FF9FD5;
-    --orange: #F46113;
-    --black: black; 
+  --darkBlue: #1433D9;
+  --lightBlue: #CBD3FF;
+  --pink: #FF9FD5;
+  --orange: #F46113;
+  --black: black; 
   }
+
 html {
-    font-family: "Raleway";
-    font-weight: 800;
-/*<<<<<<< feature/results-page*/
-    background-color: var(--lightBlue);
+  font-family: "Raleway";
+  font-weight: 800;
+  background-color: var(--lightBlue);
 }
+
 /* button styling to match custom branding */
 .orange-btn{
     background-color: var(--orange);
