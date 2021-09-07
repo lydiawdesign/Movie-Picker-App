@@ -11,9 +11,9 @@ $(function() {
 var userSearchyear = "";
 var userSearchGenre = "";
 
-var searchButton = $("");
-var yearInput = $("");
-var genreInput = $("");
+var searchButton = $("#search-btn");
+var yearInput = $("#year");
+var genreInput = $("#dropdown-menu4");
 
 var listResults = [];
 
