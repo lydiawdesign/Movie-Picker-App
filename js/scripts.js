@@ -1,19 +1,19 @@
 
-$(function() {
-    $("#year").datepicker({
-        changeYear: true,
-        yearRange: "-100:+0",
-        dateFormat: "yy",
-    })
-    // console.log("Help")
-});
+// $(function() {
+//     $("#year").datepicker({
+//         changeYear: true,
+//         yearRange: "-100:+0",
+//         dateFormat: "yy",
+//     })
+//     // console.log("Help")
+// });
 
 var userSearchyear = "";
 var userSearchGenre = "";
 
-var searchButton = $("#search-btn");
-var yearInput = $("#year");
-var genreInput = $("#dropdown-menu4");
+var $searchButton = $("#search-btn");
+var $yearInput = $("#year-select");
+var $genreInput = $("#genre-select");
 
 var listResults = [];
 
@@ -70,6 +70,23 @@ function getRecommendedList(array) {
         });
     }
 }
+function generateYears() {
+    for (var i=2021; i>1950; i--) {
+        $("<option>").text(i).val(i).appendTo("#year-select");
+    }
+}
 
+$("#search-btn").on("click", function(event){
+    event.preventDefault();
+    userSearchGenre = $genreInput.val();
+    // console.log(userSearchGenre);
+    userSearchyear = $yearInput.val();
+    // console.log(userSearchyear);
+    document.location.href="Results.html";
+    getMovieList(userSearchyear,userSearchGenre);
+    
 
+})
+
+generateYears();
 
