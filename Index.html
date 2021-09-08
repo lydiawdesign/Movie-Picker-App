@@ -31,70 +31,70 @@
                 rotten tomato rating. Found more than one recommendation you’d like to watch? Save movie titles to your list to revisit at a later time!
             </p>
         </article>
-        <form class="container">
+        <form class="container" action="Results.html">
             
 
                 <!-- Genre Dropdown -->
                 <div class="select" id="dropdown-menu4" role="menu">
-                    <select>
+                    <select id="genre-select">
                             <option class="dropdown-item">
                                 -- Select Genre --
                             </option>
-                            <option class="dropdown-item" data-tag="28">
+                            <option class="dropdown-item" value="28">
                                 Action
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="12">
+                            <option class="dropdown-item" value="12">
                                 Adventure
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="16">
+                            <option class="dropdown-item" value="16">
                                 Animation
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="35">
+                            <option class="dropdown-item" value="35">
                                 Comedy
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="80">
+                            <option class="dropdown-item" value="80">
                                 Crime
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="99">
+                            <option class="dropdown-item" value="99">
                                 Documentary
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="18">
+                            <option class="dropdown-item" value="18">
                                 Drama
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="10751">
+                            <option class="dropdown-item" value="10751">
                                 Family
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="14">
+                            <option class="dropdown-item" value="14">
                                 Fantasy
                             </option>
-                            <option class="dropdown-item" data-tag="36">
+                            <option class="dropdown-item" value="36">
                                 History
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="27">
+                            <option class="dropdown-item" value="27">
                                 Horror
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="10402">
+                            <option class="dropdown-item" value="10402">
                                 Music
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="9648">
+                            <option class="dropdown-item" value="9648">
                                 Mystery
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="10749">
+                            <option class="dropdown-item" value="10749">
                                 Romace
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="878">
+                            <option class="dropdown-item" value="878">
                                 Science Fiction
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="10770">
+                            <option class="dropdown-item" value="10770">
                                 TV Movie
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="53">
+                            <option class="dropdown-item" value="53">
                                 Thriller
                             </option>
-                            <option href="#" class="dropdown-item" data-tag="10752">
+                            <option class="dropdown-item" value="10752">
                                 War
                             </option>
-                            <option class="dropdown-item" data-tag="37">
+                            <option class="dropdown-item" value="37">
                                 Western
                             </option>
                     </select>
@@ -103,7 +103,10 @@
             
 
 
-            <input type="text" id="year" value="Year">
+            <!-- <input type="text" id="year" value="Year"> -->
+            <select id="year-select">
+                <option>Select Year</option>
+            </select>
             <input id="search-btn" class="button sub" type="submit" value="Submit Choice">
         </form>
     </div>
