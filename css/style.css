@@ -87,10 +87,10 @@ header {
 .container #year {
   width: 95.33px;
 }
-.wrapper {
+/* .wrapper {
   background-color: var(--orange);
   width: 66.6667vw;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50px;
-}
+} */
