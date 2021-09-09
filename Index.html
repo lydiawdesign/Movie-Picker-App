@@ -12,32 +12,25 @@
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/datepicker.css">
-    
-    
-
-
 </head>
+
 <body>
+
     <header class="header">
         <img src="./resources/logo.webp" alt="REPLACE">
     </header>
-
-    <article class="box has-text-centered m-5 is-striped is-size-4 is-flex is-justify-content-center">
+ 
+    <article class="section is-vcentered has-text-centered mx-6 my-6 is-size-4">
         <p>
-            At-home movie nights have become more and more frequent over the past year given the current world pandemic. With so many streaming
-            services, it’s difficult to choose what to watch. We are faced with cognitive impairment, struggling to make a choice due to the overload of
-            options out there. Groovy Movie will solve that for you! Simply input what movie genre and decade you are interested in, and Groovy Movie will
-            select 5 movie titles randomly that fit your criteria. Once the 5 films are selected, click on the movie poster and see a brief synopsis and the
-            rotten tomato rating. Found more than one recommendation you’d like to watch? Save movie titles to your list to revisit at a later time!
+            With so many streaming services, it’s difficult to choose what to watch. We all struggle with the overload of
+            options out there. Groovy Movie will help reduce the number of options for you! Simply input what movie genre and release year and Groovy Movie will
+            select 5 movie titles that fit your criteria. Once the 5 films are selected, click on the movie poster to see more details or click the "Save to My List" button for later. Found more than one recommendation you’d like to watch? Save movie titles to your list to revisit at a later time!
         </p>
     </article>
 
-    <div class="is-flex is-align-items-center is-justify-content-center">
-    
-        <form class="is-flex-direction-column">
-            
-            <!-- Genre Dropdown -->
-            <div class="field select" id="dropdown-menu4" role="menu">
+    <div class="column is-one-quarter is-centered" id="indexBox">
+        <form>
+            <div class="field select section is-centered" id="dropdown-menu4" role="menu">
                 <select>
                         <option>
                             -- Select Genre --
@@ -101,18 +94,19 @@
                         </option>
                 </select>
             </div>
-            <div class= "field">
-             <input type="text" id="year" value="Year" class="">
+            <div class= "field section is-centered">
+            <input type="text" id="year" value="Year" class="">
             </div>
-            <div class= "field">
-             <input id="search-btn" class="button sub" type="submit" value="Submit Choice">
+            <div class= "field section is-centered">
+            <input id="search-btn" class="button blue-btn lrg-btn" type="submit" value="Submit Choice">
             </div>
         </form>
     </div>
-    <div class="container fav">
-        <a class="button">Favorites List</a>
+
+    <div class="columns is-centered">>
+        <a class="button white-btn lrg-btn column is-one-quarter">Favorites List</a>
     </div>
-    
+
 </body>
 
 <script src="https://code.jquery.com/jquery.js"></script>

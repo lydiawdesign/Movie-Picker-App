@@ -4,7 +4,7 @@
   --pink: #FF9FD5;
   --orange: #F46113;
   --black: black; 
-  }
+}
 
 html {
   font-family: "Raleway";
@@ -14,12 +14,12 @@ html {
 
 /* button styling to match custom branding */
 .orange-btn{
-    background-color: var(--orange);
-    color: white;
-    border-radius: 6px;
-    font-weight: bolder;
-    box-shadow: 5px 5px 5px grey;
-    cursor: pointer;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 6px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer;
 }
 
 .blue-btn{
@@ -41,9 +41,9 @@ html {
 }
 
 .lrg-btn{
-    font-size: 150%;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-    margin: 1rem 3rem 1rem 3rem;
+  font-size: 150%;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  margin: 1rem 3rem 1rem 3rem;
 }
 
 .med-btn{
@@ -64,7 +64,7 @@ header {
   display: flex;
   justify-content: center;
 }
-.description {
+/* .description {
   width: 66.6667vw;
   margin-left: auto;
   margin-right: auto;
@@ -75,7 +75,7 @@ header {
 }
 .container {
   /* background-color: #1433D9; */
-  width: 66.6667vw;
+  /* width: 66.6667vw;
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -86,11 +86,17 @@ header {
 }
 .container #year {
   width: 95.33px;
-}
+} */
 /* .wrapper {
   background-color: var(--orange);
   width: 66.6667vw;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50px;
-} */
+} */ 
+
+#indexBox{
+  background-color: var(--orange);
+  border-radius: 15px;
+}
+
