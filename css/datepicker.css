@@ -1,9 +1,9 @@
-.ui-datepicker table, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-month {
+/* .ui-datepicker table, .ui-datepicker-prev, .ui-datepicker-next, .ui-datepicker-month {
     display: none;
 }
 .ui-datepicker {
     display: flex;
     justify-content: center;
     /* background-color: aqua; */
-    width: 95.33px;
-}
+    /* width: 95.33px; */
+/* } */
