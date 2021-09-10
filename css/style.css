@@ -104,6 +104,11 @@ header {
 
 #container-box {
   font-family: 'Bebas Neue', cursive;
+  width: fit-content;
+  /* left: auto; */
+  align-items: center;
+  position: relative;
+  /* margin-right: auto; */
 }
 
 /* .description {
