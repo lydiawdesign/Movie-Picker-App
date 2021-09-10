@@ -51,57 +51,65 @@ function getMovieList(year,genre) {
 }
 
 function getRecommendedList(array) {
-    var movieDetailURL = "";
-    for (var i =0; i<array.length; i++) {
-        // console.log("i:\t"+i+"\n");
-        movieDetailURL = "https://api.themoviedb.org/3/movie/" + array[i] + "?api_key=" + tmdbApiKey + "&language=en-US";
-        let selector = ".button_" + i;
-        fetch(movieDetailURL)
-        .then(function(response) {
-            // console.log("i:\t"+i+"\n");
-            return response.json();
-        })
-        .then(function(data) {
-            console.log(data.release_date);
-            var movieName = data.original_title;
-            var releaseDate = JSON.stringify(data.release_date).split("-");
-            releaseDate[0] = releaseDate[0].replace('"', '');
-            console.log(`\n\tRelease date:\t${releaseDate[0]}\n`);
-            $(selector)[0].setAttribute("data-year", releaseDate[0]);
-            console.log(releaseDate);
-            // console.log(buttons[0][0]);
-            // console.log("i:\t"+selector+"\n");
-            var posterPath = "https://image.tmdb.org/t/p/original/" + data.poster_path;
-            $(selector)[0].setAttribute("data-title", movieName);
-            var Gs = [];
-            var tempArrary = [];
-            for (let i=0; i<data.genres.length; i++) {
-                if (i == 0) {
-                    tempArrary = data.genres[i].name;
-                } else {
-                    tempArrary = " "+data.genres[i].name;
-                }
-                Gs.push(tempArrary);
-                // console.log(Gs);
-                Gs.toString();
-                // console.log(`Gs:\t\t${Gs}`);
-            }
-            $(selector)[0].setAttribute("data-genre", Gs);
-            console.log($(selector));
-            // console.log(movieName);
-            // console.log(posterPath);
-            // console.log(data.overview);
-            var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieName.trim() + "&api-key=" + nytReviewApiKey;
-            // fetch(reviewURL)
-            // .then(function(response) {
-            //     return response.json();
-            // })
-            // .then(function(review) {
-            //     // console.log(review);
-            //     // var nytReviewUrl = data.results[0].link[2];
-            //     // console.log(nytReviewUrl);
-            // });
-        });
+
+    const requests = array.map(function(id) {
+        return fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=" + tmdbApiKey + "&language=en-US"); 
+    });
+    Promise.all(requests)
+        .then(function(results){
+            return Promise.all(results.map(function(result) {
+                return result.json();
+            }))
         
-    }
+        })
+        .then(function(data){
+            for (var i =0; i < data.length; i++) {
+                // console.log(data);
+                var movieName = data[i].original_title;
+                var movieId = data[i].id;
+                var posterPath = "https://image.tmdb.org/t/p/original/" + data[i].poster_path;
+                
+                // console.log(movieName);
+                $("#movie-name" + i).html(movieName);
+                // console.log(movieId);
+                $("#movie-name" + i).attr('movie-id', movieId);
+                // console.log(posterPath);
+                $("#movie-poster-" + i).attr("src", posterPath );
+            }
+        })
 }
+    
+
+// function getMovieDetails(id) {
+//     // console.log(data.overview);
+//     var movieId = id.
+//             var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieName.trim() + "&api-key=" + nytReviewApiKey;
+//             fetch(reviewURL)
+//             .then(function(response) {
+//                 return response.json();
+//             })
+//             .then(function(review) {
+//                 console.log(review);
+//                 for (var i=0; i<review.results.length; i++) {
+//                     if (movieName === review.results[i].display_title) {
+//                         console.log(review.results[i].display_title);
+//                     } else {
+//                         console.log("No NYT reviews")
+//                     }
+//                 }
+//                 // console.log(review.results[0].display_title)
+//                 // var nytReviewUrl = data.results[0].link[2];
+//                 // console.log(nytReviewUrl);
+//             });
+// }
+
+// $(".detail-btn").on("click", getMovieDetails($(this).siblings('p')));
+// {
+//     event.preventDefault();
+//     userSearchGenre = $genreInput.val();
+//     // console.log(userSearchGenre);
+//     userSearchyear = $yearInput.val();
+//     // console.log(userSearchyear);
+//     document.location.href='Results.html?q='+userSearchGenre+'&'+userSearchyear;
+// })
+
