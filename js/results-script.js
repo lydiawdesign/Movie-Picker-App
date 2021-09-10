@@ -62,6 +62,42 @@ function getRecommendedList(array) {
             }))
         
         })
+          .then(function(data){
+            for (var i =0; i < data.length; i++) {
+                // console.log(data);
+                var movieName = data[i].original_title;
+                var releaseDate = JSON.stringify(data[i].release_date).split("-");
+                releaseDate[0] = releaseDate[0].replace('"', '');
+                // console.log(releaseDate[0]);
+                var movieId = data[i].id;
+                var posterPath = "https://image.tmdb.org/t/p/original/" + data[i].poster_path;
+                let selector = ".button_" + i;
+                
+                // console.log(movieName);
+                $("#movie-name" + i).html(movieName);
+                // console.log(movieId);
+                $("#movie-name" + i).attr('movie-id', movieId);
+                // console.log(posterPath);
+                $("#movie-poster-" + i).attr("src", posterPath );
+
+                $(selector)[0].setAttribute("data-title", movieName);
+                $(selector)[0].setAttribute("data-year", releaseDate[0]);
+                var Gs = [];
+                var tempArrary = [];
+                for (let i=0; i<data[0].genres.length; i++) {
+                    if (i == 0) {
+                        tempArrary = data[0].genres[i].name;
+                    } else {
+                        tempArrary = " "+data[0].genres[i].name;
+                    }
+                    Gs.push(tempArrary);
+                    // console.log(Gs);
+                    Gs.toString();
+                    // console.log(`Gs:\t\t${Gs}`);
+                }
+                $(selector)[0].setAttribute("data-genre", Gs);
+            }
+        })
         .then(function(data){
             for (var i =0; i < data.length; i++) {
                 // console.log(data);
@@ -112,4 +148,3 @@ function getRecommendedList(array) {
 //     // console.log(userSearchyear);
 //     document.location.href='Results.html?q='+userSearchGenre+'&'+userSearchyear;
 // })
-
