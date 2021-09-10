@@ -98,53 +98,62 @@ function getRecommendedList(array) {
                 $(selector)[0].setAttribute("data-genre", Gs);
             }
         })
-        .then(function(data){
-            for (var i =0; i < data.length; i++) {
-                // console.log(data);
-                var movieName = data[i].original_title;
-                var movieId = data[i].id;
-                var posterPath = "https://image.tmdb.org/t/p/original/" + data[i].poster_path;
-                
-                // console.log(movieName);
-                $("#movie-name" + i).html(movieName);
-                // console.log(movieId);
-                $("#movie-name" + i).attr('movie-id', movieId);
-                // console.log(posterPath);
-                $("#movie-poster-" + i).attr("src", posterPath );
-            }
-        })
 }
     
 
-// function getMovieDetails(id) {
-//     // console.log(data.overview);
-//     var movieId = id.
-//             var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieName.trim() + "&api-key=" + nytReviewApiKey;
-//             fetch(reviewURL)
-//             .then(function(response) {
-//                 return response.json();
-//             })
-//             .then(function(review) {
-//                 console.log(review);
-//                 for (var i=0; i<review.results.length; i++) {
-//                     if (movieName === review.results[i].display_title) {
-//                         console.log(review.results[i].display_title);
-//                     } else {
-//                         console.log("No NYT reviews")
-//                     }
-//                 }
-//                 // console.log(review.results[0].display_title)
-//                 // var nytReviewUrl = data.results[0].link[2];
-//                 // console.log(nytReviewUrl);
-//             });
-// }
+function getMovieDetails(id) {
+    // console.log(data.overview);
+    var movieId = id;
+    var movieName = "";
+    var openingYear = "";
+    var reviewYear = "";
+    var synopsis = "";
+    var shortReview = "";
+    var reviewLink = "";
+    
+    var detailUrl = "https://api.themoviedb.org/3/movie/" + movieId + "?api_key=" + tmdbApiKey + "&language=en-US";
+    fetch(detailUrl)
+    .then(function(response){
+        return response.json();
+    })
+    .then(function(details){
+        console.log(details);
+        movieName = details.original_title;
+        openingYear = new Date(details.release_date).getFullYear();
+        // console.log(movieName);
+        $('#review-name').html(movieName);
+        synopsis = details.overview;
+        console.log(synopsis);
+        $('#review-synop').html(synopsis);
+        var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieName.trim() + "&api-key=" + nytReviewApiKey;
+        // console.log(reviewURL);
+        fetch(reviewURL)
+        .then(function(response) {
+        return response.json();
+        })
+        .then(function(review){
+        // console.log(review);
+            for (var i =0; i<review.results.length; i++) {
+                reviewYear = new Date(review.results[i].opening_date).getFullYear();
+                // console.log(reviewYear);
+                if (movieName === review.results[i].display_title && openingYear === reviewYear) {
+                    shortReview = review.results[i].summary_short;
+                    reviewLink = review.results[i].link.url;
+                    // console.log(shortReview);
+                    // console.log(reviewLink);
+                    $('#review-short').html(shortReview);
+                    $('#review-link').html(reviewLink);
+                }
+            }
+            
+        })
+    })
+    $('#review').removeClass("is-hidden"); 
+}
 
-// $(".detail-btn").on("click", getMovieDetails($(this).siblings('p')));
-// {
-//     event.preventDefault();
-//     userSearchGenre = $genreInput.val();
-//     // console.log(userSearchGenre);
-//     userSearchyear = $yearInput.val();
-//     // console.log(userSearchyear);
-//     document.location.href='Results.html?q='+userSearchGenre+'&'+userSearchyear;
-// })
+$(".detail-btn").on("click", function(){
+    var passID = $(this).siblings('p').attr('movie-id');
+    // console.log(passID);
+    getMovieDetails(passID);
+});
+
