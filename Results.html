@@ -13,8 +13,8 @@
     <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
-    <header class="header">
-        <img src="./Planning/Design/Groovy logo png.png" alt="REPLACE">
+    <header class="header mb-5">
+        <img src="./resources/logo.webp" alt="REPLACE">
     </header>
 
     <section class="columns is-centered">
@@ -25,42 +25,42 @@
 
     <section id="results" class="columns is-desktop is-centered">
 
-        <div id="movie-0" class="column is-2">
+        <div id="movie-0" class="mobie column is-2">
             <p class="title" id="movie-name0"></p>
             <img src="" id="movie-poster-0">
             <button id="savebtn1" onclick="saveToTable($('.button_0'))" class="orange-btn med-btn button_0">Save to My List</button>
             <button id="detsbtn1" class="orange-btn med-btn detail-btn">Movie Details</button>
         </div>
-        <div id="movie-1" class="column is-2">
+        <div id="movie-1" class="mobie column is-2">
             <p class="title" id="movie-name1"></p>
             <img src="" id="movie-poster-1">
             <button id="savebtn2" onclick="saveToTable($('.button_1'))" class="orange-btn med-btn button_1">Save to My List</button>
             <button id="detsbtn2" class="orange-btn med-btn detail-btn">Movie Details</button>
         </div>
-        <div id="movie-2" class="column is-2">
+        <div id="movie-2" class="mobie column is-2">
             <p class="title" id="movie-name2"></p>
             <img src="" id="movie-poster-2">
             <button id="savebtn3" onclick="saveToTable($('.button_2'))" class="orange-btn med-btn button_2">Save to My List</button>
             <button id="detsbtn3" class="orange-btn med-btn detail-btn">Movie Details</button>
         </div>
-        <div id="movie-3" class="column is-2">
+        <div id="movie-3" class="mobie column is-2">
             <p class="title" id="movie-name3"></p>
             <img src="" id="movie-poster-3">
             <button id="savebtn4" onclick="saveToTable($('.button_3'))" class="orange-btn med-btn button_3">Save to My List</button>
             <button id="detsbtn4" class="orange-btn med-btn detail-btn">Movie Details</button>
         </div>
-        <div id="movie-4" class="column is-2">
+        <div id="movie-4" class="mobie column is-2">
             <p class="title" id="movie-name4"></p>
             <img src="" id="movie-poster-4">
             <button id="savebtn5" onclick="saveToTable($('.button_4'))" class="orange-btn med-btn button_4">Save to My List</button>
             <button id="detsbtn5" class="orange-btn med-btn detail-btn">Movie Details</button>
         </div>
     </section>
-    <section id='review' class='columns is-desktop is-centered is-hidden'>
+    <section id='review' class='review columns is-desktop is-centered is-flex is-align-content-center is-justify-content-center is-flex-direction-column is-hidden'>
         <header id='review-name' class='title'>Movie Title</header>
-        <p id='review-synop'>synopsis</p>
-        <p id='review-short'>NYT Short review</p>
-        <a id='review-link' href=''>link to full NYT review</a>
+        <p id='review-synop' class="is-flex-grow-2 mr-auto ml-auto">synopsis</p>
+        <p id='review-short' class="mr-auto ml-auto mt-3">NYT Short review</p>
+        <a id='review-link' href='' class="mr-auto ml-auto mt-3">link to full NYT review</a>
 
     </section>
 </body>

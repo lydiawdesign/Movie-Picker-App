@@ -13,21 +13,23 @@ html {
 }
 
 header {
-    width: 100vw;
-    /* background-color: red; */
-    height: 200px;
-    display: flex;
-    justify-content: center;
-  }
-
-  header img{
+  width: 100vw;
+  /* background-color: red; */
+  height: 200px;
+  display: flex;
+  justify-content: center;
+}
+header img {
+  height: 200px;
+}
+  /* header img{
       max-width: 35%;
-  }
+  } */
 
-  span{
-      text-align: right;
-      
-  }
+span{
+  text-align: right;
+  
+}
 /* button styling to match custom branding */
 .orange-btn{
   background-color: var(--orange);
@@ -147,11 +149,26 @@ header {
   border-radius: 15px;
 }
 
-p.title {
+.mobie p.title {
   /* background-color: #1433D9; */
   height: 150px;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.review header.title {
+  height: fit-content;
+}
+.review p#review-synop {
+  width: 30vw;
+}
+.review p#review-short {
+  width: 30vw;
+}
+
+
+p.introText {
+  width: 45vw;
 }

@@ -143,6 +143,7 @@ function getMovieDetails(id) {
                     // console.log(reviewLink);
                     $('#review-short').html(shortReview);
                     $('#review-link').html(reviewLink);
+                    $("#review-link")[0].href = reviewLink;
                 }
             }
             
