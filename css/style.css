@@ -142,3 +142,11 @@ header {
   border-radius: 15px;
 }
 
+p.title {
+  /* background-color: #1433D9; */
+  height: 150px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
