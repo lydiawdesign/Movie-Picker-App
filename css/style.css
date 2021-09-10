@@ -4,7 +4,7 @@
   --pink: #FF9FD5;
   --orange: #F46113;
   --black: black; 
-  }
+}
 
 html {
   font-family: "Raleway";
@@ -12,14 +12,30 @@ html {
   background-color: var(--lightBlue);
 }
 
+header {
+    width: 100vw;
+    /* background-color: red; */
+    height: 200px;
+    display: flex;
+    justify-content: center;
+  }
+
+  header img{
+      max-width: 35%;
+  }
+
+  span{
+      text-align: right;
+      
+  }
 /* button styling to match custom branding */
 .orange-btn{
-    background-color: var(--orange);
-    color: white;
-    border-radius: 6px;
-    font-weight: bolder;
-    box-shadow: 5px 5px 5px grey;
-    cursor: pointer;
+  background-color: var(--orange);
+  color: white;
+  border-radius: 6px;
+  font-weight: bolder;
+  box-shadow: 5px 5px 5px grey;
+  cursor: pointer;
 }
 
 .blue-btn{
@@ -27,28 +43,61 @@ html {
   color: white;
   border-radius: 4px;
   font-weight: bolder;
-  box-shadow: 5px 5px 5px grey;
+  box-shadow: 3px 3px 5px rgb(38, 38, 38);
   cursor: pointer
 }
+
+.blue-btn:hover{
+    background-color: white;
+    color: var(--darkBlue);
+    font-weight: bolder;
+    box-shadow: 2px 2px 5px grey;
+    cursor: pointer
+  }
 
 .white-btn{
   background-color: white;
   color: var(--darkBlue);
   border-radius: 4px;
+  border: 1px solid var(--darkBlue);
   font-weight: bolder;
   box-shadow: 5px 5px 5px grey;
   cursor: pointer;
 }
 
+.white-btn:hover{
+    background-color: var(--darkBlue);
+    color: white;
+    border-radius: 4px;
+    border: 1px solid var(--darkBlue);
+    font-weight: bolder;
+    box-shadow: 5px 5px 5px grey;
+    cursor: pointer;
+  }
+
 .lrg-btn{
-    font-size: 150%;
-    padding: 0.5rem 3rem 0.5rem 3rem;
-    margin: 1rem 3rem 1rem 3rem;
+  font-size: 150%;
+  padding: 0.5rem 3rem 0.5rem 3rem;
+  margin: 1rem 3rem 1rem 3rem;
 }
 
 .med-btn{
   font-size: 100%;
   padding: 0.5rem 1rem 0.5rem 1rem;
+}
+
+.orange-container{
+    background-color: var(--orange);
+    border-radius: 2rem;
+    padding: 3rem 8rem 1rem 8rem;
+}
+
+#genre-select{
+    min-width: 11em;
+}
+
+#year-select{
+    min-width: 11em;
 }
 
 /* CSS styling for list page */
@@ -57,14 +106,7 @@ html {
   font-family: 'Bebas Neue', cursive;
 }
 
-header {
-  width: 100vw;
-  /* background-color: red; */
-  height: 200px;
-  display: flex;
-  justify-content: center;
-}
-.description {
+/* .description {
   width: 66.6667vw;
   margin-left: auto;
   margin-right: auto;
@@ -75,7 +117,7 @@ header {
 }
 .container {
   /* background-color: #1433D9; */
-  width: 66.6667vw;
+  /* width: 66.6667vw;
   display: flex;
   justify-content: center;
   margin-top: 50px;
@@ -86,11 +128,17 @@ header {
 }
 .container #year {
   width: 95.33px;
-}
+} */
 /* .wrapper {
   background-color: var(--orange);
   width: 66.6667vw;
   margin-left: auto;
   margin-right: auto;
   border-radius: 50px;
-} */
+} */ 
+
+#indexBox{
+  background-color: var(--orange);
+  border-radius: 15px;
+}
+

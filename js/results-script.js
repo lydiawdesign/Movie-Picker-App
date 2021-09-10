@@ -1,20 +1,29 @@
 var userSearchyear = "";
 var userSearchGenre = "";
 
+const buttons = [
+    $("#savebtn1"),
+    $("#savebtn2"),
+    $("#savebtn3"),
+    $("#savebtn4")
+]
+
 var listResults = [];
 
 var tmdbApiKey = "ab1b96d8093598b55845446ca45cff2f";
 var nytReviewApiKey = "zQiVNyj3jaUrAJuxqJ6cXAWiQkq1JwxU";
 
+
+
 function getParameters(){
     var searchParameters = document.location.search.split('&');
-    console.log(document.location.search)
-    console.log(`Search Parameters: ${searchParameters}`)
+    // console.log(document.location.search)
+    // console.log(`Search Parameters: ${searchParameters}`)
 
     var genre = searchParameters[0].split('=')[1]
     var year = searchParameters[1]
-    console.log(`Genre: ${genre}`)
-    console.log(`Year: ${year}`)
+    // console.log(`Genre: ${genre}`)
+    // console.log(`Year: ${year}`)
 
     getMovieList(year, genre)
 }
@@ -30,18 +39,19 @@ function getMovieList(year,genre) {
             return response.json();
         })
         .then(function(data) {
-        console.log(data);
+        // console.log(data);
         listResults.push(data.results[0].id);
         listResults.push(data.results[1].id);
         listResults.push(data.results[2].id);
         listResults.push(data.results[3].id);
         listResults.push(data.results[4].id);
-        console.log(listResults);
+        // console.log(listResults);
         getRecommendedList(listResults);
     });
 }
 
 function getRecommendedList(array) {
+
     const requests = array.map(function(id) {
         return fetch("https://api.themoviedb.org/3/movie/" + id + "?api_key=" + tmdbApiKey + "&language=en-US"); 
     });
@@ -102,3 +112,4 @@ function getRecommendedList(array) {
 //     // console.log(userSearchyear);
 //     document.location.href='Results.html?q='+userSearchGenre+'&'+userSearchyear;
 // })
+
