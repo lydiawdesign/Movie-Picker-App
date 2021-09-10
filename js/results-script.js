@@ -117,13 +117,13 @@ function getMovieDetails(id) {
         return response.json();
     })
     .then(function(details){
-        console.log(details);
+        // console.log(details);
         movieName = details.original_title;
         openingYear = new Date(details.release_date).getFullYear();
         // console.log(movieName);
         $('#review-name').html(movieName);
         synopsis = details.overview;
-        console.log(synopsis);
+        // console.log(synopsis);
         $('#review-synop').html(synopsis);
         var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieName.trim() + "&api-key=" + nytReviewApiKey;
         // console.log(reviewURL);
