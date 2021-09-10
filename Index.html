@@ -10,36 +10,35 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Raleway:wght@100&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/datepicker.css">
+    <link rel="stylesheet" href="./css/style.css">
 </head>
 
 <body>
 
-    <header class="header">
+    <header class="header my-3">
         <img src="./resources/logo.webp" alt="REPLACE">
     </header>
 
-    <article class="box has-text-centered m-5 is-striped is-size-4 is-flex is-justify-content-center">
-
-        <p>
+    <!-- <article class="box has-text-centered m-5 is-striped is-size-4 is-flex is-justify-content-center no-bckgd"> -->
+        <p class="has-text-centered my-6 mx-6 has-text-black is-size-5" >
             With so many streaming services, it’s difficult to choose what to watch. We all struggle with the overload of
             options out there. Groovy Movie will help reduce the number of options for you! Simply input what movie genre and release year and Groovy Movie will
             select 5 movie titles that fit your criteria. Once the 5 films are selected, click on the movie poster to see more details or click the "Save to My List" button for later. Found more than one recommendation you’d like to watch? Save movie titles to your list to revisit at a later time!
         </p>
-    </article>
 
+<div class="is-flex is-align-items-center is-justify-content-center">
+    <div class="orange-container">
 
-    <div class="is-flex is-align-items-center is-justify-content-center">
-    
-        <form class="is-flex-direction-column" method="POST" action="Results.html">
+        <form class="is-flex-direction-column is-align-items-center" method="POST" action="Results.html">
             
             <!-- Genre Dropdown -->
+            <span class="has-text-black has-text-weight-bold is-size-4 mr-2">Genre:</span>
             <div class="field select" id="dropdown-menu4" role="menu">
                 <select id="genre-select">
 
                         <option>
-                            -- Select Genre --
+                            Select Genre
                         </option>
                         <option value="28">
                             Action
@@ -101,19 +100,25 @@
                 </select>
             </div>
 
-            <select id="year-select">
-                <option>Select Year</option>
-            </select>
-            <div class= "field">
-             <input id="search-btn" class="button sub blue-btn lrg-btn" type="submit" value="Find My Movie">
+            <div class="is-flex is-align-items-center mt-2">
+                <span class="has-text-black has-text-weight-bold is-size-4 pl-5 mr-2">Year:</span>
+                <div class="field select">
+                    <select id="year-select">
+                        <option>Select Year</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class= "field mt-3">
+             <input id="search-btn" class="sub button is-rounded blue-btn lrg-btn has-text-weight-medium" type="submit" value="Find My Movie">
 
             </div>
 
         </form>
     </div>
-    <div class="container fav">
-        <a href ='List.html' class="button">Favorites List</a>
-
+</div>
+    <div class="is-flex is-align-items-center is-justify-content-center">
+        <button onclick ="window.location.href='List.html'" class="lrg-btn white-btn has-text-weight-medium">View My List</button>
     </div>
 
 </body>
