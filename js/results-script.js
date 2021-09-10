@@ -125,27 +125,57 @@ function getMovieDetails(id) {
         synopsis = details.overview;
         // console.log(synopsis);
         $('#review-synop').html(synopsis);
-        var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + movieName.trim() + "&api-key=" + nytReviewApiKey;
-        // console.log(reviewURL);
+        if (movieName.includes('(')) {
+            var subString = movieName.substring(0, movieName.indexOf('(')).slice(0,-1);
+        } else if (movieName.includes(':')) {
+            var subString = movieName.substring(0, movieName.indexOf(':'))
+            console.log(subString);
+        } else {
+            var subString = movieName;
+        }
+        
+        // var movieNameNoSpecialChars = movieName.replace('(', '');
+        // movieNameNoSpecialChars = movieNameNoSpecialChars.replace(')', '');
+        // console.log(movieNameNoSpecialChars);
+        var reviewURL = "https://api.nytimes.com/svc/movies/v2/reviews/search.json?query=" + subString.trim() + "&api-key=" + nytReviewApiKey;
+        console.log(reviewURL);
         fetch(reviewURL)
         .then(function(response) {
         return response.json();
         })
         .then(function(review){
-        // console.log(review);
+        console.log(review);
+        if (review.num_results === 0) {
+            console.log("HELP");
+            $('#review-short').html(shortReview);
+            $('#review-link').html("NYTimes has not written a review.");
+            $("#review-link")[0].href = window.location.href;
+        } else {
             for (var i =0; i<review.results.length; i++) {
                 reviewYear = new Date(review.results[i].opening_date).getFullYear();
-                // console.log(reviewYear);
-                if (movieName === review.results[i].display_title && openingYear === reviewYear) {
+                console.log(review.results[i].display_title)
+                if (review.results[i].display_title.includes(":")) {
+                    var subStringURL = review.results[i].display_title.substring(0, review.results[i].display_title.indexOf(":"));
+                } else {
+                    var subStringURL = review.results[i].display_title;
+                }
+                
+                console.log(`${subStringURL}\n${subString}\n\t${openingYear}\n\t${reviewYear}`);
+                console.log("\n"+typeof subStringURL+"\n"+typeof subString+"\n\t"+typeof openingYear+"\n\t"+typeof reviewYear);
+                console.log(`${subStringURL.length}\n${subString.length}\n\t${openingYear.length}\n\t${reviewYear.length}`);
+                if (subString == subStringURL && openingYear == reviewYear) {
+                    
                     shortReview = review.results[i].summary_short;
                     reviewLink = review.results[i].link.url;
-                    // console.log(shortReview);
+                    console.log(shortReview);
                     // console.log(reviewLink);
                     $('#review-short').html(shortReview);
                     $('#review-link').html(reviewLink);
                     $("#review-link")[0].href = reviewLink;
                 }
+                
             }
+        }
             
         })
     })
