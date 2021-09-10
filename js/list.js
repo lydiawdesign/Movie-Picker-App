@@ -104,3 +104,8 @@ function loadFunct() {
         }
     }
 }
+
+function abortFeat() {
+    window.localStorage.clear();
+    window.location.reload();
+}
