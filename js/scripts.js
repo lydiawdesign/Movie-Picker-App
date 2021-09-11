@@ -25,7 +25,7 @@ $("#search-btn").on("click", function(event){
     userSearchyear = $yearInput.val();
     // console.log($genreInput.data);
     easyPie(userSearchGenre, userSearchyear);
-    document.location.href='Results.html?q='+userSearchGenre+'&'+userSearchyear;
+    document.location.href='results.html?q='+userSearchGenre+'&'+userSearchyear;
 })
 
 generateYears();
