@@ -3,7 +3,7 @@
 An application that allows you to randomly choose 5 movies to watched based on the genre and year that you are interested in. 
 
 **Link to Repo**: https://github.com/lydiawdesign/Movie-Picker-App
-**Link to Live Site**: 
+**Link to Live Site**: https://lydiawdesign.github.io/Movie-Picker-App/
 **Link to presentation**: https://docs.google.com/presentation/d/1hPBn9gicmnxaEmiOYdOq7IDQ_zCblUUenwas7mDfkTY/edit?usp=sharing
 
 ##Elevator Pitch: 
