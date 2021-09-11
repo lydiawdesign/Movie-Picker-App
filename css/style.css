@@ -44,6 +44,7 @@ span{
   font-weight: bolder;
   box-shadow: 5px 5px 5px grey;
   cursor: pointer;
+  margin-bottom: 5px;
 }
 
 .blue-btn{
@@ -125,8 +126,11 @@ span{
 }
 
 .mobie p.title {
-  /* background-color: #1433D9; */
-  margin-top: .25rem;
+  background-color: white;
+  border-radius: 10px 10px 0px 0px;
+  color: var(--darkBlue);
+  border: 1px solid black;
+  margin-top: 30px;
   height: 75px;
   font-size: 150%;
   text-align: center;
@@ -172,4 +176,10 @@ p.introText {
   height: 2vw;
   border-radius: 10px;
   color: white;
+}
+.moviePoster {
+  margin-top: -25px;
+}
+.saveButt {
+  margin-top: 10px
 }
