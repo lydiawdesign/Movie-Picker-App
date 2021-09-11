@@ -16,6 +16,7 @@ function easyPie(g,y) {
         genre: g,
         year: y
     }
+    console.log("Helppppp");
     window.localStorage.setItem("savedGenreYear", JSON.stringify(key));
     genre=g;
     year=y;

@@ -1,5 +1,7 @@
 var userSearchyear = "";
 var userSearchGenre = "";
+var searchGenre = $(".searchGenre");
+var searchYear = $(".searchYear");
 
 const buttons = [
     $("#savebtn1"),
@@ -24,7 +26,11 @@ function getParameters(){
     var year = searchParameters[1]
     // console.log(`Genre: ${genre}`)
     // console.log(`Year: ${year}`)
-
+    console.log(window.localStorage.savedGenre)
+    var genreVal = JSON.parse(window.localStorage.savedGenre)
+    searchGenre[0].innerHTML = genreVal;
+    // console.log(year);
+    searchYear[0].innerHTML = year;
     getMovieList(year, genre)
 }
 
