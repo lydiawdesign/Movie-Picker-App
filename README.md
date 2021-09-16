@@ -62,5 +62,5 @@ information about those films  and/or save movies to my list.
 
 Copyright (c) 2021 Lydia Williamson, Kyle Lux, Hayden Lugo, and Ben Kasper
 
-Contact: lydiawdesign@gmail.com
+Contact: lydiawdesign@gmail.com, kyleslux86@gmail.com, hayden@lugowebdevelopment.com
 
