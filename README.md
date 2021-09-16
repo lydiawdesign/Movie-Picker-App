@@ -50,12 +50,17 @@ information about those films  and/or save movies to my list.
 ## Screenshots
 
 **Index**
-![Index Page](Planning\Design\Groovy Movie Index Screenshot.jpg)
+![Groovy Movie Index Screenshot](https://user-images.githubusercontent.com/87274229/133634837-5f2e80da-3d47-4450-8356-e8f0c7fffa7a.jpg)
+
 
 **Result Page**
-![Result Page](Planning\Design\Groovy Movie Results Screenshot.jpg)
+![Groovy Movie Results Screenshot](https://user-images.githubusercontent.com/87274229/133634952-76ab8a39-2053-472e-8deb-2dc507ed691b.jpg)
+
 
 **List page**
-![List Page](Planning\Design\Groovy Movie My List Screenshot.jpg)
+![Groovy Movie My List Screenshot](https://user-images.githubusercontent.com/87274229/133634878-3cc81716-fd54-4656-a49e-8d158e9109d6.jpg)
 
+Copyright (c) 2021 Lydia Williamson, Kyle Lux, Hayden Lugo, and Ben Kasper
+
+Contact: lydiawdesign@gmail.com
 
